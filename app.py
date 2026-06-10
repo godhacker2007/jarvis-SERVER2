@@ -1,23 +1,5 @@
 
 
-app = Flask(
-    __name__,
-    static_folder=os.path.join(os.path.dirname(__file__), "static"),
-    template_folder=os.path.join(os.path.dirname(__file__), "template")
-    )
-
-CORS(app)
-
-frontend = os.path.join(os.path.dirname(__file__), "static")
-
-
-
-import requests
-import base64
-
-
-
-
 
 
 @app.route('/')
