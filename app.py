@@ -1,11 +1,47 @@
+from flask import Flask, request, jsonify, send_from_directory
+from flask_cors import CORS
+from app_launcher import open_app
+from openai import OpenAI
+import sys, os
+import os
+
+
+client = OpenAI()
+
+# path fix
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
+from jarvis_core.brain import process, handle_command
+
+app = Flask(
+    __name__,
+    static_folder=os.path.join(os.path.dirname(__file__), "static"),
+    template_folder=os.path.join(os.path.dirname(__file__), "template")
+    )
+
+CORS(app)
+
+frontend = os.path.join(os.path.dirname(__file__), "static")
 
 
 
+import requests
+import base64
 
-@app.route('/')
-def home():
-    return "Jarvis server is running!"
 
+@app.route("/generate-image", methods=["POST"])
+def generate_image():
+    data = request.get_json()
+    prompt = data.get("prompt", "")
+
+    if not prompt.strip():
+        return jsonify({"error": "Prompt empty"}), 400
+
+    image_url = generate_ai_image(prompt)
+
+    return jsonify({
+        "image": image_url
+    })
 @app.route("/")
 def ui():
     return send_from_directory(frontend, "index.html")
