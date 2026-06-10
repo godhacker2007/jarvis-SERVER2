@@ -18,7 +18,7 @@ import base64
 
 
 
-app = Flask(__name__)
+
 
 @app.route('/')
 def home():
