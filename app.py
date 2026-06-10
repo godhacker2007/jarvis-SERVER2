@@ -6,20 +6,6 @@
 def home():
     return "Jarvis server is running!"
 
-
-@app.route("/generate-image", methods=["POST"])
-def generate_image():
-    data = request.get_json()
-    prompt = data.get("prompt", "")
-
-    if not prompt.strip():
-        return jsonify({"error": "Prompt empty"}), 400
-
-    image_url = generate_ai_image(prompt)
-
-    return jsonify({
-        "image": image_url
-    })
 @app.route("/")
 def ui():
     return send_from_directory(frontend, "index.html")
