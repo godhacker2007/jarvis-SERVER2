@@ -1,0 +1,73 @@
+[
+  {
+    "chrome": "C:/Program Files/Google/Chrome/Application/chrome.exe",
+    "notepad": "notepad",
+    "calculator": "calc",
+    "youtube": "https://www.youtube.com",
+    "gmail": "https://mail.google.com",
+    "cmd": "cmd"
+  },
+  {
+    "patterns": [
+      "hello",
+      "hi",
+      "hey"
+    ],
+    "response": "Hello! I am Jarvis. How can I help you today?"
+  },
+  {
+    "patterns": [
+      "how are you",
+      "what's up"
+    ],
+    "response": "I am fine, thank you!"
+  },
+  {
+    "patterns": [
+      "tell me a joke",
+      "make me laugh"
+    ],
+    "response": "Why did the scarecrow win an award? Because he was outstanding in his field!"
+  },
+  {
+    "patterns": [
+      "what is your name",
+      "who are you"
+    ],
+    "response": "I am Jarvis, your personal AI assistant."
+  },
+  {
+    "patterns": [
+      "bye",
+      "goodbye",
+      "see you later"
+    ],
+    "response": "Goodbye! Have a great day!"
+  },
+  {
+    "patterns": [
+      "thank you",
+      "thanks"
+    ],
+    "response": "You're welcome!"
+  },
+  {
+    "patterns": [
+      "what can you do",
+      "your capabilities"
+    ],
+    "response": "I can assist you with various tasks, answer questions, and provide information."
+  },
+  {
+    "patterns": [
+      "what is python"
+    ],
+    "response": "python is a high-level programming language"
+  },
+  {
+    "patterns": [
+      "https://image.pollinations.ai/prompt/iron man cyberpunk"
+    ],
+    "response": "y"
+  }
+]
