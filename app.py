@@ -1,16 +1,4 @@
-from flask import Flask, request, jsonify, send_from_directory
-from flask_cors import CORS
-from app_launcher import open_app
-from openai import OpenAI
-import sys, os
-import os
 
-client = OpenAI()
-
-# path fix
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
-
-from jarvis_core.brain import process, handle_command
 
 app = Flask(
     __name__,
